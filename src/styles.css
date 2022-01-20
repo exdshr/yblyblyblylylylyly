@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.xd {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    position: relative;
+}
+
+.xd img {
+    position: absolute;
+    z-index: 5;
+}
+
+.xd img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.xd img:nth-child(2) {
+    margin-top: 1rem;
+    width: 80%;
+}
+
+.xd img:nth-child(3) {
+    height: 250px;
+    top: 60px;
+    transform: rotate(-100deg)
+}
+
+.xd img:nth-child(3):hover {
+    cursor: pointer;
+    animation: movingAlpenGold 1s infinite;
+}
+
+@keyframes movingAlpenGold {
+    0% {
+        transform: rotate(-80deg);
+    }
+    50% {
+        transform: rotate(-120deg);
+    }
+    100% {
+        transform: rotate(-80deg);
+    }
+}
