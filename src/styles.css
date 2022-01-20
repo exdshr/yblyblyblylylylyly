@@ -30,27 +30,30 @@ body {
 .xd img:nth-child(3) {
     height: 25vw;
     top: 25vh;
-    transform: rotate(-20deg)
-}
-
-.xd img:nth-child(3):hover {
     cursor: pointer;
     animation: movingBox 1s infinite;
 }
 
-#modal {
+dialog {
     width: 50vw;
-    position: absolute;
     background: white;
     box-shadow: 0 0 10px black;
     border-radius: 10px;
-    margin: 0 auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
+    border: none;
+}
+
+#modal-box {
+    display: flex;
     padding: 10px;
-    text-align: center;
+}
+
+#modal-box img {
+    width: 60%;
+    margin: auto;
+}
+
+#modal-box img:first-child {
+    width: 30%;
 }
 
 dialog::backdrop {
