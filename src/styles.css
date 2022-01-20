@@ -7,7 +7,7 @@ body {
 
 .xd {
     display: flex;
-    height: auto;
+    flex-grow: 1;
     justify-content: center;
     position: relative;
 }
@@ -28,24 +28,43 @@ body {
 }
 
 .xd img:nth-child(3) {
-    height: 250px;
-    top: 60px;
-    transform: rotate(-100deg)
+    height: 25vw;
+    top: 25vh;
+    transform: rotate(-20deg)
 }
 
 .xd img:nth-child(3):hover {
     cursor: pointer;
-    animation: movingAlpenGold 1s infinite;
+    animation: movingBox 1s infinite;
 }
 
-@keyframes movingAlpenGold {
+#modal {
+    width: 50vw;
+    position: absolute;
+    background: white;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 10px;
+    text-align: center;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, .5);
+}
+
+@keyframes movingBox {
     0% {
-        transform: rotate(-80deg);
+        transform: scale(1, 1);
     }
     50% {
-        transform: rotate(-120deg);
+        transform: scale(1.2, 1.2);
     }
     100% {
-        transform: rotate(-80deg);
+        transform: scale(1, 1);
     }
 }

@@ -1,6 +1,9 @@
-const img = document.getElementById("czekolada");
+const img = document.getElementById("box");
 if (img) {
   img.addEventListener("click", () => {
-    window.open("http://ppe.pl/", "_blank");
+    let modalBox = document.getElementById('modal');
+    if (typeof modalBox.showModal === "function") {
+      modalBox.showModal();
+    }
   });
 }
